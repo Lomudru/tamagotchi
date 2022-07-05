@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tamagochi</title>
+    <!--Mon css-->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="choice">
+        <h1>Choisis ton chat</h1>
+        <img src="assets/img/base.png" alt="un chat" class="basic">
+        <img src="assets/img/base.png" alt="un chat" class="gray">
+        <img src="assets/img/base.png" alt="un chat" class="sepia">
+        <img src="assets/img/base.png" alt="un chat" class="contrast">
+        <img src="assets/img/base.png" alt="un chat" class="invert">
+        <img src="assets/img/base.png" alt="un chat" class="black">
+        <img src="assets/img/base.png" alt="un chat" class="white">
+        <img src="assets/img/base.png" alt="un chat" class="ghost">
+        <img src="assets/img/base.png" alt="un chat" class="roux">
+    </div>
+    <div id="takeName" class="hide">
+        <div id="nameChoice">
+            <label for="name"></label>
+            <input type="text" id="name" placeholder="Quel est son nom">
+            <img src="assets/img/base.png" alt="le chat" class="cat">
+            <button id="buttonName" disabled>Valider</button>
+        </div>
+        <div id="signe">
+            <img src="assets/img/signe/belier.png" alt="le signe du bélier" class="belier select">
+            <img src="assets/img/signe/taureaux.png" alt="le signe du taureau" class="taureau select">
+            <img src="assets/img/signe/gemeaux.png" alt="le signe du gémeaux" class="gemeaux select">
+            <img src="assets/img/signe/cancer.png" alt="le signe du cancer" class="cancer select">
+            <img src="assets/img/signe/lion.png" alt="le signe du lion" class="lion select">
+            <img src="assets/img/signe/vierge.png" alt="le signe de la vierge" class="vierge select">
+            <img src="assets/img/signe/balance.png" alt="le signe de la balance" class="balance select">
+            <img src="assets/img/signe/scorpion.png" alt="le signe du scorpion" class="scorpion select">
+            <img src="assets/img/signe/sagitaire.png" alt="le signe du sagittaire" class="sagittaire select">
+            <img src="assets/img/signe/capricorne.png" alt="le signe du capricorne" class="capricorne select">
+            <img src="assets/img/signe/verseau.png" alt="le signe du verseau" class="verseau select">
+            <img src="assets/img/signe/poisson.png" alt="le signe du poisson" class="poisson select">
+        </div>
+        <div id="signeName">
+            <p>Bélier</p>
+            <p>Taureau</p>
+            <p>Gémeaux</p>
+            <p>Cancer</p>
+            <p>Lion</p>
+            <p>Vierge</p>
+            <p>Balance</p>
+            <p>Scorpion</p>
+            <p>Sagittaire</p>
+            <p>Capricorne</p>
+            <p>Verseau</p>
+            <p>Poissons</p>
+        </div>
+    </div>
+    <img src="assets/img/walk.gif" id="outside" class="hide">
+    <div id="catZone" class="hide">
+        <div id="food">
+            <p></p>
+        </div>
+        <div id="sleep">
+            <p></p>
+        </div>
+        <div id="know">
+            <p></p>
+        </div>
+        <div id="catHere">
+            <h2></h2>
+            <img src="assets/img/base.png" alt="le chat" class="cat margTop" id="imgcat">
+        </div>
+        <div id="happiness">
+            <p></p>
+        </div>
+        <div id="love">
+            <p></p>
+        </div>
+        <div id="entertainment">
+            <p></p>
+        </div>
+    </div>
+    <img src="assets/img/effect.gif" id="effect" class="hide">
+    <ul id="btns" class="hide">
+        <li>Nourrir
+            <ul id="mange">
+                <li class="action"><button>Viande</button></li>
+                <li class="action"><button>Cookie</button></li>
+                <li class="action"><button>Poisson</button></li>
+                <li class="action"><button>Glace</button></li>
+                <li class="action"><button>Pizza</button></li>
+                <li class="action"><button>Ramen</button></li>
+                <li class="action"><button>Riz</button></li>
+                <li class="action"><button>Sushi</button></li>
+                <li class="action"><button>Donut</button></li>
+                <li class="action"><button>Cocaine</button></li>
+            </ul>
+        </li>
+        <li class="action"><button>Dormir</button></li>
+        <li class="action"><button>Étudier</button></li>
+        <li class="action"><button>Danser</button></li>
+        <li class="action"><button>Sortir</button></li>
+        <li>Jouer
+            <ul id="joue">
+                <li class="action"><button>Tic Tac Toe</button></li>
+            </ul>
+        </li>
+        <li class="action"><button>Forcée a dormir</button></li>
+    </ul>
+    <img src="assets/img/signe/signe-pusheen/gemeaux.gif" alt="pusheen signe astrologique" id="astro" class="hide">
+    <img src="assets/img/plante.png" alt="une plante cartoon" class="hide" id="plante">
+    <img src="assets/img/gift.png" alt="un cadeau" class="hide" id="gift">
+    <img src="assets/img/brille.png" alt="un effect brillant" class="hide" id="brille">
+    <img src="assets/img/plante.png" alt="ce qu'il y as a l'intérieur du cadeau" class="hide" id="inside">
+    <div id="morpion" class="hide">
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <p id="whoWin"></p>
+    </div>
+    <img src="assets/img/bread.png" alt="Du pain style cartoon" class="hide" id="bread">
+    <script src="assets/js/script.js" type="module"></script>
+</body>
+</html>
