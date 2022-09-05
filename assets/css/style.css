@@ -30,6 +30,9 @@ body{
 .basic{
     filter: none;
 }
+.pikachu{
+    filter: saturate(3) contrast(40.5) brightness(2) grayscale(0.6);
+}
 #choice img {
     width: 11vw;
 }

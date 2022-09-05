@@ -103,8 +103,11 @@ function specialName() {
     if (textarea.value === "pikachu" || textarea.value === "Pikachu" || textarea.value === "pixel" || textarea.value === "Pixel" || textarea.value === "panda" || textarea.value === "Panda" || textarea.value === "carapuce" || textarea.value === "Carapuce" || textarea.value === "harry" || textarea.value === "Harry" || textarea.value === "harry potter" || textarea.value === "Harry Potter" || textarea.value === "miaouss" || textarea.value === "Miaouss" || textarea.value === "bulbizarre" || textarea.value === "Bulbizarre" || textarea.value === "merlin" || textarea.value === "Merlin" || textarea.value === "salameche" || textarea.value === "Salameche" || textarea.value === "dog" || textarea.value === "Dog" || textarea.value === "r2d2" || textarea.value === "R2D2"){
         chat.src = "assets/img/glitch.gif";
         chat.classList.remove("margTop");
+        setTimeout(base, 2000);
     }
-    setTimeout(base, 2000);
+    else{
+        base()
+    }
 }
 textarea.addEventListener("keyup", verifyName);
 nameValidator.addEventListener("click", validName);
@@ -180,8 +183,8 @@ function baseAstro(){
     console.log(ave.astro);
 }
 export function base() {
-    baseAstro();
     timeout = 2000;
+    baseAstro();
     for (let l = 0; l < link.length; l++){
         link[l].disabled = false;
     }
@@ -236,6 +239,9 @@ export function base() {
     else if (textarea.value === "pikachu" || textarea.value === "Pikachu"){
         chat.src = "assets/img/pikachu.gif";
         chat.classList.add("basic");
+        ave.type.remove("invert");
+        ave.type.add("pikachu");
+        console.log(ave.type);
         chat.classList.remove("margTop");
     }
     else if (textarea.value === "pixel" || textarea.value === "Pixel"){
