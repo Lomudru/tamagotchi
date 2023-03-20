@@ -100,7 +100,7 @@ for (let a = 0; a < astroSign.length; a++){
     astroSign[a].addEventListener("click", quelAstro)
 }
 function specialName() {
-    if (textarea.value === "pikachu" || textarea.value === "Pikachu" || textarea.value === "pixel" || textarea.value === "Pixel" || textarea.value === "panda" || textarea.value === "Panda" || textarea.value === "carapuce" || textarea.value === "Carapuce" || textarea.value === "harry" || textarea.value === "Harry" || textarea.value === "harry potter" || textarea.value === "Harry Potter" || textarea.value === "miaouss" || textarea.value === "Miaouss" || textarea.value === "bulbizarre" || textarea.value === "Bulbizarre" || textarea.value === "merlin" || textarea.value === "Merlin" || textarea.value === "salameche" || textarea.value === "Salameche" || textarea.value === "dog" || textarea.value === "Dog" || textarea.value === "r2d2" || textarea.value === "R2D2"){
+    if (textarea.value === "pikachu" || textarea.value === "Pikachu" || textarea.value === "pixel" || textarea.value === "Pixel" || textarea.value === "panda" || textarea.value === "Panda" || textarea.value === "carapuce" || textarea.value === "Carapuce" || textarea.value === "harry" || textarea.value === "Harry" || textarea.value === "harry potter" || textarea.value === "Harry Potter" || textarea.value === "miaouss" || textarea.value === "Miaouss" || textarea.value === "bulbizarre" || textarea.value === "Bulbizarre" || textarea.value === "merlin" || textarea.value === "Merlin" || textarea.value === "salameche" || textarea.value === "Salameche" || textarea.value === "dog" || textarea.value === "Dog" || textarea.value === "r2d2" || textarea.value === "R2D2" || textarea.value === "sherlock" || textarea.value === "Sherlock" || textarea.value === "nutella" || textarea.value === "Nutella" || textarea.value === "ghost" || textarea.value === "Ghost"){
         chat.src = "assets/img/glitch.gif";
         chat.classList.remove("margTop");
         setTimeout(base, 2000);
@@ -167,18 +167,25 @@ function baseAstro(){
     }
     else if (ave.astro.value === "scorpion"){
         astro.src = "assets/img/signe/signe-pusheen/scorpion.gif";
+        astro.style.top = "5%";
     }
     else if (ave.astro.value === "sagittaire"){
         astro.src = "assets/img/signe/signe-pusheen/sagittaire.gif";
+        astro.style.top = "3%";
     }
     else if (ave.astro.value === "capricorne"){
-        astro.src = "assets/img/signe/signe-pusheen/sagittaire.gif";
+        astro.src = "assets/img/signe/signe-pusheen/capricorne.gif";
+        astro.style.top = "3%";
     }
     else if (ave.astro.value === "verseau"){
         astro.src = "assets/img/signe/signe-pusheen/verseau.gif";
+        astro.style.top = "3%";
     }
     else if (ave.astro.value === "poisson"){
         astro.src = "assets/img/signe/signe-pusheen/poisson.gif";
+        astro.style.top ="2%";
+        astro.style.right = "12%";
+        astro.style.width = "9%";
     }
     console.log(ave.astro);
 }
@@ -235,13 +242,13 @@ export function base() {
     else if (ave.food < 25){
         chat.src = "./assets/img/hungry.gif";
         chat.classList.remove("margTop");
+        chat.classList.add("small")
     }
     else if (textarea.value === "pikachu" || textarea.value === "Pikachu"){
         chat.src = "assets/img/pikachu.gif";
         chat.classList.add("basic");
         ave.type.remove("invert");
         ave.type.add("pikachu");
-        console.log(ave.type);
         chat.classList.remove("margTop");
     }
     else if (textarea.value === "pixel" || textarea.value === "Pixel"){
@@ -293,9 +300,28 @@ export function base() {
         chat.classList.add("basic");
         chat.classList.add("smaller");
     }
+    else if (textarea.value === "sherlock" || textarea.value === "Sherlock"){
+        chat.src = "assets/img/sherlock.gif";
+        chat.classList.add("basic");
+        chat.classList.add("smaller");
+    }
+    else if (textarea.value === "nutella" || textarea.value === "Nutella"){
+        chat.src = "assets/img/nutella.gif";
+        chat.classList.add("basic");
+    }
+    else if (textarea.value === "ghost" || textarea.value === "Ghost"){
+        chat.src = "assets/img/ghost.gif";
+        chat.classList.add("basic");
+        chat.classList.add("smaller");
+    }
     else {
         chat.src = "assets/img/base.png";
     }
+    if (ave.food === 100 && ave.sleep === 100 && ave.happiness === 100 && ave.entertain === 100 && ave.love === 100){
+        chat.src = "assets/img/win.gif";
+        chat.classList.add("smaller");
+    }
+
 }
 function endeffect() {
     effect.classList.add("hide");
@@ -593,7 +619,7 @@ function event() {
     }
 
 
-    if (this.textContent === "Cocaine"){
+    if (this.textContent === "CBD"){
         chat.src        = "assets/img/drogue.gif";
         ave.food        = 10;
         ave.know        = 10;
@@ -879,3 +905,29 @@ chat.addEventListener("click", click);
 for (let k = 0; k < link.length ; k++){
     link[k].addEventListener("click", event)
 }
+
+let konami = [];
+let code = ["ArrowUp","ArrowUp","ArrowDown","ArrowDown","ArrowLeft","ArrowRight","ArrowLeft","ArrowRight","b","a"];
+let right = false;
+document.addEventListener("keydown",function (e) {
+    konami.push(e.key)
+    if (konami[0] === code[0] && konami[1] === code[1] && konami[2] === code[2] && konami[3] === code[3] && konami[4] === code[4] && konami[5] === code[5] && konami[6] === code[6] && konami[7] === code[7] && konami[9] === code[9] && konami.length === code.length){
+        right = true;
+    }
+    if (konami.length >= code.length){
+        konami.splice(0,1);
+    }
+    if (right){
+        ave.food       = 100;
+        ave.know       = 100;
+        ave.sleep      = 100;
+        ave.happiness  = 100;
+        ave.entertain  = 100;
+        ave.love       = 100;
+        bread.classList.remove("hide");
+        plante.classList.remove("hide");
+        right = false;
+        base();
+        affiche();
+    }
+})
